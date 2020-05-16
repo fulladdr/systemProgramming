@@ -1,0 +1,25 @@
+# 폴더는 20170795.c, 20170795.h, makefile, opcode.txt, document, README로 구성되어 있습니다.
+# linux shell 기반으로 만들어졌습니다.
+# make 명령어를 통해 컴파일할 수 있습니다
+# make 명령어 입력 후 20170795.out file이 만들어집니다
+# ./20170795.out을 입력하면 실행됩니다.
+
+# sicsim> 창에 명령어를 입력하면 됩니다.
+
+1. type filename
+현재 디렉토리에서 filename에 해당하는 파일을 읽어서 화면에 그대로 출력합니다
+현재 디렉토리에서 filename에 해당하는 파일이 존재하지 않는 경우 에러를 출력합니다
+
+2. assemble filename
+filename의 확장자는 항상 .asm파일이어야 하며 이외의 경우는 에러를 출력합니다
+또한 해당파일이 존재하지 않는 경우에도 에러를 출력합니다
+filename에 해당하는 파일을 읽어서 assemble하여 object파일과 listing파일을 생성합니다
+생성되는 listing파일명은 filename에서 확장자만 lst로 변경된 파일명입니다
+생성되는 object파일명은 filename에서 확장자만 obj로 변경된 파일명입니다
+소스파일에 에러가 존재할 경우, 해당 에러가 발생한 LINE과 에러내용을 출력하고 종료합니다
+또한 listing파일과 object파일은 생성하지 않습니다
+
+3. symbol
+가장 최근 assemble 한 파일의 symbol table을 화면에 출력합니다 
+symbol의 출력은 symbol을 기준으로 내림차순 정렬하여 출력합니다
+assemble 도중 error가 발생하거나 최근에 assemble한 파일이 없는 경우 symbol table은 비어있습니다
